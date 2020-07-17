@@ -6,11 +6,18 @@ KoGPT on Huggingface Transformers
 
 - [SKT-AI 에서 공개한 KoGPT2](https://github.com/SKT-AI/KoGPT2)를 [Transformers](https://github.com/huggingface/transformers)에서 사용하도록 하였습니다.
 
+### Update
+
+#### 0.3
+
+- transformers 3.0의 변화된 API에 대응하도록 변경하였습니다.
+- 2.x API 사용 경우 0.2.0 버전을 사용 바랍니다.
+
 ### Requirements
 
-- transformers
-- tokenizers
-- torch
+- transformers >= 3.0.0
+- tokenizers >= 0.7.0
+- torch >= 1.1.0
 
 ### Installation
 

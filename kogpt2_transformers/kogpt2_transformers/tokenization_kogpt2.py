@@ -2,8 +2,8 @@
 import os
 import json
 # 3rd-party
-from transformers.tokenization_utils import PreTrainedTokenizerFast
-from transformers.file_utils import hf_bucket_url, cached_path
+from transformers.tokenization_utils_fast import PreTrainedTokenizerFast
+from transformers.file_utils import hf_bucket_url
 from tokenizers import SentencePieceBPETokenizer
 
 class KoGPT2TokenizerFast(PreTrainedTokenizerFast):
@@ -72,23 +72,7 @@ class KoGPT2TokenizerFast(PreTrainedTokenizerFast):
             pad_token=pad_token,
             **kwargs,
         )
-    
+
     @classmethod
     def from_pretrained(cls, *inputs, **kwargs):
-        tok = cls._from_pretrained(*inputs, **kwargs)
-        tok.add_tokens(list(tok.unique_added_tokens_encoder))
-        pretrained_model_name_or_path = inputs[0]
-        if os.path.isdir(pretrained_model_name_or_path):
-            full_file_name = os.path.join(pretrained_model_name_or_path, cls.vocab_files_names['special_tokens_map_file'])
-            if not os.path.exists(full_file_name):
-                full_file_name = None
-        else:
-            full_file_name = hf_bucket_url(
-                pretrained_model_name_or_path, filename=cls.vocab_files_names['special_tokens_map_file'], use_cdn=False
-            )
-        
-        if(full_file_name is not None):
-            with open(cached_path(full_file_name)) as fp:
-                special_tokens = json.load(fp)
-            tok.add_special_tokens(special_tokens)
-        return tok
+        return cls._from_pretrained(*inputs, **kwargs)
