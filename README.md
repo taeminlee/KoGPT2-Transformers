@@ -6,6 +6,11 @@ KoGPT on Huggingface Transformers
 
 - [SKT-AI 에서 공개한 KoGPT2](https://github.com/SKT-AI/KoGPT2)를 [Transformers](https://github.com/huggingface/transformers)에서 사용하도록 하였습니다.
 
+### Demo
+
+- 일상 대화 챗봇 : http://demo.tmkor.com:36200/dialo
+- 화장품 리뷰 생성 : http://demo.tmkor.com:36200/ctrl
+
 ### Update
 
 #### 0.3
