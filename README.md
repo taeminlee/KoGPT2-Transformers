@@ -15,7 +15,7 @@ KoGPT on Huggingface Transformers
 
 #### 0.3.1
 
-- kogpt2_transformers.get_kogpt2_tokenizer() 사용 시 special_token_dict 에 <unused0> ~ <unused97> 토큰 추가
+- kogpt2_transformers.get_kogpt2_tokenizer() 사용 시 special_token_dict 에 `<unused0>` ~ `<unused97>` 토큰 추가
 
 #### 0.3.0
 
