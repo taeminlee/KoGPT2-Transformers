@@ -13,10 +13,22 @@ KoGPT on Huggingface Transformers
 
 ### Update
 
-#### 0.3
+#### 0.3.1
+
+- kogpt2_transformers.get_kogpt2_tokenizer() 사용 시 special_token_dict 에 <unused0> ~ <unused97> 토큰 추가
+
+#### 0.3.0
 
 - transformers 3.0의 변화된 API에 대응하도록 변경하였습니다.
 - 2.x API 사용 경우 0.2.0 버전을 사용 바랍니다.
+
+#### 0.2.0
+
+- huggingface의 tokenize 패키지를 이용하도록 변경하였습니다. 속도 개선!
+
+#### 0.1.0
+
+- 최초 릴리즈
 
 ### Requirements
 
