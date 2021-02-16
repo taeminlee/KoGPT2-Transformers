@@ -1,6 +1,6 @@
 # KoGPT2-Transformers
 
-KoGPT on Huggingface Transformers
+KoGPT2 on Huggingface Transformers
 
 ### KoGPT2-Transformers
 
@@ -12,6 +12,12 @@ KoGPT on Huggingface Transformers
 - 화장품 리뷰 생성 : http://demo.tmkor.com:36200/ctrl
 
 ### Update
+
+#### 0.4.0
+
+- transformers 4.0의 변화된 API에 대응하도록 변경하였습니다.
+- 설치 없이 사용 가능! 😘
+- 3.x API 사용 시 0.3.x 버전을 사용 바랍니다.
 
 #### 0.3.1
 
@@ -36,7 +42,7 @@ KoGPT on Huggingface Transformers
 - tokenizers >= 0.7.0
 - torch >= 1.1.0
 
-### Installation
+### Installation (option)
 
 - `pip install kogpt2-transformers`
 

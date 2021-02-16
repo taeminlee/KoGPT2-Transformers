@@ -1,18 +1,48 @@
 # KoGPT2-Transformers
 
-KoGPT on Huggingface Transformers
+KoGPT2 on Huggingface Transformers
 
 ### KoGPT2-Transformers
 
 - [SKT-AI 에서 공개한 KoGPT2](https://github.com/SKT-AI/KoGPT2)를 [Transformers](https://github.com/huggingface/transformers)에서 사용하도록 하였습니다.
 
+### Demo
+
+- 일상 대화 챗봇 : http://demo.tmkor.com:36200/dialo
+- 화장품 리뷰 생성 : http://demo.tmkor.com:36200/ctrl
+
+### Update
+
+#### 0.4.0
+
+- transformers 4.0의 변화된 API에 대응하도록 변경하였습니다.
+- 설치 없이 사용 가능! 😘
+- 3.x API 사용 시 0.3.x 버전을 사용 바랍니다.
+
+#### 0.3.1
+
+- kogpt2_transformers.get_kogpt2_tokenizer() 사용 시 special_token_dict 에 `<unused0>` ~ `<unused97>` 토큰 추가
+
+#### 0.3.0
+
+- transformers 3.0의 변화된 API에 대응하도록 변경하였습니다.
+- 2.x API 사용 경우 0.2.0 버전을 사용 바랍니다.
+
+#### 0.2.0
+
+- huggingface의 tokenize 패키지를 이용하도록 변경하였습니다. 속도 개선!
+
+#### 0.1.0
+
+- 최초 릴리즈
+
 ### Requirements
 
-- transformers
-- tokenizers
-- torch
+- transformers >= 3.0.0
+- tokenizers >= 0.7.0
+- torch >= 1.1.0
 
-### Installation
+### Installation (option)
 
 - `pip install kogpt2-transformers`
 
