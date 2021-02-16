@@ -38,8 +38,8 @@ KoGPT2 on Huggingface Transformers
 
 ### Requirements
 
-- transformers >= 3.0.0
-- tokenizers >= 0.7.0
+- transformers >= 4.0.0
+- tokenizers >= 0.10.0
 - torch >= 1.1.0
 
 ### Installation (option)
