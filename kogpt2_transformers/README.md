@@ -74,3 +74,20 @@ GENERATED SEQUENCE : 안녕한 밤에 안녕</s><s> 야 저나해</s><s> 나 미
 GENERATED SEQUENCE : 안녕!</s><s> 너는 이제부터 다시 너에게 의지할 꺼야.</s><s> 난 정말 너를 사랑하고 잇어.</s><s> 너 때문에 많이 아파해서 죽고 싶진 않을 꺼야.</s><s> 정말 너무 힘들다.</s><s> 너의 맘 변하지 않도록 기도할께.</s><s> 사랑해요.</s><s> 젼</s><s> 정말이지 널 믿엇던 약속이 거짓말인 줄 알면서도 더 이상 너에게 의지하지 않을께.</s><s> 정말 너무 힘들어서 살기 어렵다 정말
 ```
 
+- using transformers classes
+
+```python
+import torch
+from transformers import GPT2LMHeadModel, PreTrainedTokenizerFast
+
+torch.manual_seed(42)
+
+model = GPT2LMHeadModel.from_pretrained("taeminlee/kogpt2")
+tokenizer = PreTrainedTokenizerFast.from_pretrained("taeminlee/kogpt2")
+
+input_ids = tokenizer.encode("안녕", add_special_tokens=False, return_tensors="pt")
+output_sequences = model.generate(input_ids=input_ids, do_sample=True, max_length=100, num_return_sequences=3)
+for generated_sequence in output_sequences:
+    generated_sequence = generated_sequence.tolist()
+    print("GENERATED SEQUENCE : {0}".format(tokenizer.decode(generated_sequence, clean_up_tokenization_spaces=True)))
+```
